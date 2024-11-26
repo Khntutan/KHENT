@@ -10,7 +10,7 @@ def create_biography():
     st.header("Personal Information")
     name = st.text_input("Name")
     birth_date = st.date_input("Birthday")
-    birth_place = st.text_input("Birthplace)
+    birth_place = st.text_input("Birthplace")
 
     # Collect details for career, education, and achievements
     st.header("Background Details")
