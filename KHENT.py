@@ -37,7 +37,7 @@ def create_biography():
         ---------------------
         **Name:** {name}
             **Date of Birth:** {November, 6, 2005.}
-        **Place of Birth:** {Baleguian, Jabonga, Agusan del Norte}
+        **Place of Birth:** {"Baleguian, Jabonga, Agusan del Norte"}
         
         **Education:**
         {Graduate in Taganito National High School}
