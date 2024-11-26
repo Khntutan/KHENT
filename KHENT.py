@@ -1,31 +1,26 @@
+
 import streamlit as st
 from PIL import Image
 import io
 
 def create_biography():
     # Header for the app
-    st.title("Interactive Biography Generator")
+    st.title("My own Biography")
 
     # Collect basic information
     st.header("Personal Information")
-    name = st.text_input("Enter your full name:")
-    birth_date = st.date_input("Select your date of birth:")
-    birth_place = st.text_input("Enter your place of birth:")
+    name = st.text_input("Khent lorenz paqueros:")
+    birth_date = st.date_input("November, 06, 2005:")
+    birth_place = st.text_input("Baleguian, Jabonga, Agusan del Norte")
 
     # Collect details for career, education, and achievements
     st.header("Background Details")
-    education = st.text_area("Enter your education background:")
-    career = st.text_area("Enter your career details:")
-    achievements = st.text_area("Enter your achievements:")
+    education = st.text_area("Graduate at Taganto National High School")
+    achievements = st.text_area("Honor Student")
     
     # Collect hobbies and family details
     st.header("Hobbies and Family")
-    hobbies = st.text_area("Enter your hobbies or interests:")
-    family = st.text_area("Enter your family details (optional):")
-    
-    # Optional additional information
-    st.header("Additional Information")
-    additional_info = st.text_area("Enter any additional information (optional):")
+    hobbies = st.text_area("Cooking and Watching movie")
     
     # Image upload for profile picture
     st.header("Profile Picture (Optional)")
@@ -42,26 +37,23 @@ def create_biography():
         **Biography of {name}:**
         ---------------------
         **Name:** {name}
-        **Date of Birth:** {birth_date.strftime('%B %d, %Y')}
-        **Place of Birth:** {birth_place}
+        **Date of Birth:** {birth_date.strftime(November, 06, 2005)}
+        **Place of Birth:** {Baleguian, Jabonga, Agusan del Norte}
         
         **Education:**
-        {education}
-        
-        **Career:**
-        {career}
+        {Graduate in Taganito National High School}
         
         **Achievements:**
-        {achievements}
+        {Honor Student and 2nd Pingpong player in Intramurals}
         
         **Hobbies/Interests:**
-        {hobbies}
+        {I like cooking, reading books, writing peoms, and playing online games}
         
         **Family:**
-        {family}
+        {My dad is Nino M. Paqueros and my mom is Florencita B. Paquerod}
         
         **Additional Information:**
-        {additional_info}
+        {My siblings name are Francis Ivan B. Paqueros and Khyn Dexter B. Paqueros}
         """
         
         # Display the biography in markdown format
