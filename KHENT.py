@@ -10,7 +10,7 @@ def create_biography():
     # Collect basic information
     st.header("Personal Information")
     name = st.text_input("Khent lorenz paqueros:")
-    birth_date = st.date_input("November, 06, 2005:")
+    birth_date = st.date_input("November, 6, 2005:")
     birth_place = st.text_input("Baleguian, Jabonga, Agusan del Norte")
 
     # Collect details for career, education, and achievements
