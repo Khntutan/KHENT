@@ -29,7 +29,7 @@ def create_biography():
     
     # Image upload for profile picture
     st.header("Profile Picture (Optional)")
-    image_file = st.file_uploader("Upload your profile picture", type=["jpg", "png", "jpeg"])
+    image_file = st.file_uploader("https://scontent.fcgy2-4.fna.fbcdn.net/v/t39.30808-6/462617095_885906273639494_5384351385961036595_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeEo4FhRajkDbb-17-1R_GZzlP8O3xJa6vSU_w7fElrq9ApvZtlOoGOR2n4t96ZIR8pB8NY3N3z39843ACNxvKCm&_nc_ohc=OnUwvwWI32QQ7kNvgF0JCLL&_nc_zt=23&_nc_ht=scontent.fcgy2-4.fna&_nc_gid=A3b8_mJymsNQnZTBj1kaUPU&oh=00_AYAh8wlVuMTPnSC75k3UMT6XbBmvq4eqDw_W5j8ipECXlQ&oe=674B6FCD", type=["jpg", "png", "jpeg"])
     
     if image_file is not None:
         # Load and display the image
