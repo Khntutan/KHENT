@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+import pandas as pd  # Needed for date handling
 
 def create_biography():
     # Title for the app
@@ -8,7 +9,7 @@ def create_biography():
     # Personal information section
     st.header("Personal Information")
     name = st.text_input("Full Name", "Khent Lorenz Paqueros")
-    birth_date = st.date_input("Date of Birth", value="2005-11-06")
+    birth_date = st.date_input("Date of Birth", value=pd.to_datetime("2005-11-06"))
     birth_place = st.text_input("Place of Birth", "Baleguian, Jabonga, Agusan del Norte")
 
     # Career, education, and achievements section
@@ -32,9 +33,29 @@ def create_biography():
 
     # Button to generate and display the biography
     if st.button("Generate Biography"):
+        # Creating the biography string
         biography = f"""
         **Biography of {name}:**
         ---------------------
         **Name:** {name}
         **Date of Birth:** {birth_date.strftime('%B %d, %Y')}
-        **Place
+        **Place of Birth:** {birth_place}
+        
+        **Education:**
+        {education}
+        
+        **Achievements:**
+        {achievements}
+        
+        **Hobbies/Interests:**
+        {hobbies}
+        
+        **Family:**
+        {family}
+        """
+        
+        # Display the biography in markdown format
+        st.markdown(biography)
+
+# Run the function to create the app
+create_biography()
