@@ -40,19 +40,19 @@ def create_biography():
         **Place of Birth:** {"Baleguian, Jabonga, Agusan del Norte"}
         
         **Education:**
-        {Graduate in Taganito National High School}
+        {"Graduate in Taganito National High School"}
         
         **Achievements:**
-        {Honor Student and 2nd Pingpong player in Intramurals}
+        {"Honor Student and 2nd Pingpong player in Intramurals"}
         
         **Hobbies/Interests:**
-        {I like cooking, reading books, writing peoms, and playing online games}
+        {"I like cooking, reading books, writing peoms, and playing online games"}
         
         **Family:**
-        {My dad is Nino M. Paqueros and my mom is Florencita B. Paquerod}
+        {"My dad is Nino M. Paqueros and my mom is Florencita B. Paquerod"}
         
         **Additional Information:**
-        {My siblings name are Francis Ivan B. Paqueros and Khyn Dexter B. Paqueros}
+        {"My siblings name are Francis Ivan B. Paqueros and Khyn Dexter B. Paqueros"}
         """
         
         # Display the biography in markdown format
