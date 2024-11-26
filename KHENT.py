@@ -1,60 +1,48 @@
 import streamlit as st
 from PIL import Image
-import pandas as pd  # Needed for date handling
 
 def create_biography():
     # Title for the app
     st.title("My Biography")
 
-    # Personal information section
-    st.header("Personal Information")
+    # Collect basic information
     name = st.text_input("Full Name", "Khent Lorenz Paqueros")
-    birth_date = st.date_input("Date of Birth", value=pd.to_datetime("2005-11-06"))
+    birth_date = st.date_input("Date of Birth", value="2005-11-06")
     birth_place = st.text_input("Place of Birth", "Baleguian, Jabonga, Agusan del Norte")
 
-    # Career, education, and achievements section
-    st.header("Background Details")
-    education = st.text_area("Education", "Graduate at Taganito National High School")
-    achievements = st.text_area("Achievements", "Honor Student")
+    # Collect education and achievements
+    education = st.text_input("Education", "Taganito National High School Graduate")
+    achievements = st.text_input("Achievements", "Honor Student")
 
-    # Hobbies and family details section
-    st.header("Hobbies and Family")
-    hobbies = st.text_area("Hobbies", "Cooking and Watching Movies")
-    family = st.text_area("Family", "Dad: Nino M. Paqueros, Mom: Florencita B. Paqueros")
+    # Collect hobbies and family info
+    hobbies = st.text_input("Hobbies", "Cooking and Watching Movies")
+    family = st.text_input("Family", "Dad: Nino M. Paqueros, Mom: Florencita B. Paqueros")
 
-    # Image upload section for profile picture
-    st.header("Profile Picture (Optional)")
-    image_file = st.file_uploader("Upload your profile picture", type=["jpg", "png", "jpeg"])
+    # Image upload for profile picture
+    image_file = st.file_uploader("https://scontent.fcgy2-4.fna.fbcdn.net/v/t39.30808-6/462617095_885906273639494_5384351385961036595_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeEo4FhRajkDbb-17-1R_GZzlP8O3xJa6vSU_w7fElrq9ApvZtlOoGOR2n4t96ZIR8pB8NY3N3z39843ACNxvKCm&_nc_ohc=OnUwvwWI32QQ7kNvgF0JCLL&_nc_zt=23&_nc_ht=scontent.fcgy2-4.fna&_nc_gid=AaEP6EsvCx5DiJdmLGphIPw&oh=00_AYDhTYZjMNVCpply3hat1pqS_1c7b3nzmPXsKz1oqHsElQ&oe=674B6FCD", type=["jpg", "png", "jpeg"])
 
     if image_file is not None:
-        # Load and display the uploaded image
+        # Load and display the image
         image = Image.open(image_file)
-        st.image(image, caption="Uploaded Image", use_column_width=True)
+        st.image(image, caption="Profile Picture", use_column_width=True)
 
     # Button to generate and display the biography
     if st.button("Generate Biography"):
-        # Creating the biography string
         biography = f"""
         **Biography of {name}:**
         ---------------------
         **Name:** {name}
-        **Date of Birth:** {birth_date.strftime('%B %d, %Y')}
+        **Date of Birth:** {birth_date}
         **Place of Birth:** {birth_place}
         
-        **Education:**
-        {education}
+        **Education:** {education}
+        **Achievements:** {achievements}
         
-        **Achievements:**
-        {achievements}
-        
-        **Hobbies/Interests:**
-        {hobbies}
-        
-        **Family:**
-        {family}
+        **Hobbies/Interests:** {hobbies}
+        **Family:** {family}
         """
         
-        # Display the biography in markdown format
+        # Display the biography
         st.markdown(biography)
 
 # Run the function to create the app
