@@ -1,4 +1,3 @@
-
 import streamlit as st
 from PIL import Image
 import io
@@ -37,7 +36,7 @@ def create_biography():
         **Biography of {name}:**
         ---------------------
         **Name:** {name}
-            **Date of Birth:** {November, 6, 2005.}
+            **Date of Birth:** "Month Day, Year" (e.g., "November 06, 2005")
         **Place of Birth:** {Baleguian, Jabonga, Agusan del Norte}
         
         **Education:**
