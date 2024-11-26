@@ -8,18 +8,18 @@ def create_biography():
 
     # Collect basic information
     st.header("Personal Information")
-    name = st.text_input("Khent lorenz paqueros:")
-    birth_date = st.date_input("November, 6, 2005:")
-    birth_place = st.text_input("Baleguian, Jabonga, Agusan del Norte")
+    name = st.text_input("Name")
+    birth_date = st.date_input("Birthday")
+    birth_place = st.text_input("Birthplace")
 
     # Collect details for career, education, and achievements
     st.header("Background Details")
-    education = st.text_area("Graduate at Taganto National High School")
-    achievements = st.text_area("Honor Student")
+    education = st.text_area("Education")
+    achievements = st.text_area("Achievements")
     
     # Collect hobbies and family details
     st.header("Hobbies and Family")
-    hobbies = st.text_area("Cooking and Watching movie")
+    hobbies = st.text_area("Hobby and Family deatails")
     
     # Image upload for profile picture
     st.header("Profile Picture (Optional)")
