@@ -14,7 +14,7 @@ def create_biography():
 
     # Collect details for career, education, and achievements
     st.header("Background Details")
-    education = st.text_area("Education)
+    education = st.text_area("Education")
     achievements = st.text_area("Achievements")
     
     # Collect hobbies and family details
