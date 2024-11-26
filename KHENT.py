@@ -8,7 +8,7 @@ def create_biography():
     # Collect basic information
     st.header("Personal Information")
     name = st.text_input("Full Name", "Khent Lorenz Paqueros")
-    birth_date = st.date_input("Date of Birth", value=pd.to_datetime("2005-11-06"))
+    birth_date = st.date_input("Date of Birth", value="2005-11-06")
     birth_place = st.text_input("Place of Birth", "Baleguian, Jabonga, Agusan del Norte")
 
     # Collect details for career, education, and achievements
