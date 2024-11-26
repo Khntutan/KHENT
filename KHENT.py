@@ -19,7 +19,7 @@ def create_biography():
     
     # Collect hobbies and family details
     st.header("Hobbies and Family")
-    hobbies = st.text_area("Hobbies and family details")
+    hobbies = st.text_area("my hobbies is watching anime")
     
     # Image upload for profile picture
     st.header("Profile Picture (Optional)")
