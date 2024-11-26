@@ -37,7 +37,7 @@ def create_biography():
         **Biography of {name}:**
         ---------------------
         **Name:** {name}
-        **Date of Birth:** {Novemtber, 06, 2005.strftime}
+        **Date of Birth:** {Novemtber, 06, 2005.}
         **Place of Birth:** {Baleguian, Jabonga, Agusan del Norte}
         
         **Education:**
